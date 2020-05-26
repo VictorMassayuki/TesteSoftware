@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:28.0-jre'
+    testImplementation 'junit:junit:4.12'
+    implementation 'org.modelmapper:modelmapper:2.3.7'
+    compile 'org.modelmapper:modelmapper:2.3.3'
+    testCompileOnly 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+}
+
+application {
+    mainClassName = 'entrega_introducao.App'
+}
+
+test{
+    useJUnitPlatform()
+}
